@@ -1,6 +1,6 @@
-Shape = require("Shape")
+require("Shape")
 
-local Rectangle = {} -- metatable de Rectangle
+Rectangle = {} -- metatable de Rectangle
 setmetatable(Rectangle, {__index = Shape}) -- un rectangle est une sorte de Shape
 function Rectangle:new(pX, pY, pWidth, pHeight) -- constructeur du rectangle
     self = Shape:new(pX, pY) -- appelle le constructeur parent pour hériter de x et de y

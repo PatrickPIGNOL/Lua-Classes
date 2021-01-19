@@ -1,6 +1,6 @@
-Object = require("Object")
+require("Object")
 
-local Shape = {} -- metatable de Shape
+Shape = {} -- metatable de Shape
 setmetatable(Shape, {__index = Object}) -- une shape à la metatable d'un Object
 function Shape:new(pX, pY)-- constructeur de shape
     self = {} --self est un nouvel objet de type table ( {} )

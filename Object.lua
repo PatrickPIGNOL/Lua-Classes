@@ -1,5 +1,5 @@
 -- classe mère
-local Object = {} -- metatable de Shape
+Object = {} -- metatable de Shape
 setmetatable(Object, {__index = Object}) -- un Object à la metatable d'un Oject
 function Shape:new(pX, pY)-- constructeur de shape
     self = {} --self est un nouvel objet de type table ( {} )

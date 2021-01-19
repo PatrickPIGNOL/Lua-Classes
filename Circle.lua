@@ -1,6 +1,6 @@
-Shape = require("Shape")
+require("Shape")
 
-local Circle = {} -- metatable de Circle
+Circle = {} -- metatable de Circle
 setmetatable(Circle, {__index = Shape}) -- un cercle est une sorte (hérite) de Shape
 function Circle:new(pX, pY, pRadius) -- constructeur de Circle
     self = Shape:new(pX, pY) -- appelle le constructeur de Shape pour hériter de x et de y et des methodes de Shapehape
