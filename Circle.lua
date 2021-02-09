@@ -3,8 +3,8 @@ require("Shape")
 Circle = {} -- metatable de Circle
 setmetatable(Circle, {__index = Shape}) -- un cercle est une sorte (hérite) de Shape
 function Circle:new(pX, pY, pRadius) -- constructeur de Circle
-    self = Shape:new(pX, pY) -- appelle le constructeur de Shape pour hériter de x et de y et des methodes de Shapehape
-    setmetatable(self, {__index = Circle}) -- self est un Circle (qui hérite de Shape)
+    self = Shape:new(pX, pY) -- appelle le constructeur de Shape pour hériter de x et de y et des methodes de Shape
+    setmetatable(self, {__index = Circle}) -- self est de type Circle (qui hérite de Shape)
     self.radius = pRadius or 0 -- initialisation de radius
     return self -- retourne self, l'objet crée
 end
